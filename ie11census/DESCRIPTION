@@ -1,0 +1,16 @@
+Package: ie11census
+Type: Package
+Title: Access the 2011 Irish Census
+Version: 0.9
+Date: 2013-10-26
+Author: Chris Brunsdon
+Maintainer: <Christopher.Brunsdon@nuim.ie>
+Description: Set of functions to access the 2011 Irish Census in a
+    user-friendly way, allowing searching for themes and tables, and a variety
+    of geographical aggregations
+License: GPL>2.0-
+LazyData: FALSE
+Collate:
+    'ie11census-package.R'
+    'iecensmain.R'
+    'onLoad.R'
