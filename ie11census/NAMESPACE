@@ -1,5 +1,7 @@
 export(all.ie.tables)
+export(all.ie.themes)
 export(census.ie)
 export(long.field.names)
 export(pct.cols)
 export(print.iecens)
+export(theme.ie.tables)

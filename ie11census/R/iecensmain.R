@@ -94,6 +94,36 @@ all.ie.tables <- function (df=FALSE) {
   print.vlist(vars)}
 
 
+
+#' List all tables in a given theme
+#'
+#' Shows all available tables in a given theme number
+#' 
+#' @param n Theme number
+#' @return Returns \code{NULL} but lists the tables in a given theme
+#' @examples 
+#' theme.ie.tables(3)
+#' @export
+theme.ie.tables <- function (n) {
+  vars <- attr(datasets,'variables')
+  vars <- vars[grep(sprintf('T%d_',n),vars$field),]
+  class(vars) <- c("vlist",class(vars))
+  print.vlist(vars)}
+
+
+#' List all themes
+#' 
+#' Basic list of Irish Census themes - use together with \code{theme.ie.tables} to identify tables of interest
+#' 
+#' @return Returns \code{NULL} but prints out list of Irish Census themes
+#' @examples
+#' all.ie.themes()
+#' @export
+all.ie.themes <- function(x) {
+  to.show <- unique(attr(datasets,"variables")$theme)
+  for (theme in to.show) cat(theme,'\n')
+}
+
 extract.vars <- function(x) {
   cvs <- colnames(x)[-(1:3)]
   vars <- attr(datasets,"variables")
