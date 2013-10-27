@@ -145,7 +145,7 @@ long.field.names <- function(x) {
 #' @param denom If supplied,  specifies the field used as the denominator in percentage calculation.  If not supplied,  the denominator is the sum of the field specified by \code{tc} and \code{fc}.
 #' @return A data frame whose column names are the field names specified by \code{'fc'} and \code{'tc'} - a final column (of type \code{character}) is also added, called \code{GEOGID}, and corresponding to the same name column in \code{x}.
 #' @examples
-#' # Percentage of Irish speakers/non-speakers amongst those respondants who stated 'yes' or 'no' to the census question
+#' # Percentage of Irish speakers/non-speakers amongst those respondants who stated 'yes' or 'no' to the census question, by province
 #' speak.irish <- census.ie(table='ability to speak Irish',geog='PR')
 #' pct.cols(speak.irish,'T3_1YES','T3_1NO')
 #' # The same percentages,  but with a denominator of *all* respondants, including those not stating either 'yes' or 'no'
